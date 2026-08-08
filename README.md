@@ -6,6 +6,7 @@
 
 - `_loki.md` / `_loki.zh.md` — Prompt 工程代理定义（_loki：把一段 prompt 改写成最高效版本，只改写不执行）
 - `excute-plan.md` / `fix.md` — 课程配套练习
+- `yellow-hoodie-knowledge-card/` — 黄衣少年知识卡片 skill（从 Codex 导入，含 SKILL.md + references/ + assets/）
 - `.vmark/` — VMark 版本追踪库（ledger + snapshots，index.db 被忽略）
 
 ## 关于 _loki
