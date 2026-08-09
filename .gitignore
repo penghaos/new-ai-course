@@ -1,5 +1,5 @@
 # macOS
 .DS_Store
 
-# VMark runtime lock
-.vmark/group.lock
+# VMark local version store (contains full history of file revisions — never push)
+.vmark/
