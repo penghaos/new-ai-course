@@ -1,4 +1,4 @@
-# 方法卡：（英文版）AI时代学习地图生成器
+# （英文版）AI时代学习地图生成器
 
 AI Era Learning Map Generator
 
