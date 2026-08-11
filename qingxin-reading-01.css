@@ -1,0 +1,608 @@
+/*
+ * Qingxin Reading
+ * A calm, long-form reading theme for Typora.
+ * Based on qingxin.css, redesigned for comfortable Markdown reading.
+ */
+
+:root {
+  --qingxin-bg: #f5f8f7;
+  --qingxin-paper: #ffffff;
+  --qingxin-text: #283432;
+  --qingxin-muted: #6c7b78;
+  --qingxin-faint: #8d9a97;
+  --qingxin-accent: #2f908f;
+  --qingxin-accent-hover: #226f70;
+  --qingxin-accent-soft: #e7f3f1;
+  --qingxin-warm: #b95745;
+  --qingxin-border: #dce6e3;
+  --qingxin-border-strong: #c5d5d1;
+  --qingxin-code-bg: #f1f5f4;
+  --qingxin-mark: #fff0b8;
+  --qingxin-selection: #cae8e3;
+  --qingxin-content-width: 760px;
+  --qingxin-font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC",
+    "Noto Sans SC", sans-serif;
+  --qingxin-font-serif: "Songti SC", "STSong", "Noto Serif CJK SC",
+    "Noto Serif SC", serif;
+  --qingxin-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+    monospace;
+  --qingxin-shadow: 0 1px 2px rgb(34 75 69 / 4%),
+    0 14px 42px rgb(34 75 69 / 6%);
+}
+
+html {
+  font-size: 16px;
+  background: var(--qingxin-bg);
+}
+
+body {
+  color: var(--qingxin-text);
+  background: var(--qingxin-bg);
+  font-family: var(--qingxin-font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.82;
+  letter-spacing: 0.015em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--qingxin-selection);
+  color: var(--qingxin-text);
+}
+
+#write {
+  box-sizing: border-box;
+  width: min(calc(100% - 48px), var(--qingxin-content-width));
+  max-width: var(--qingxin-content-width);
+  min-height: calc(100vh - 48px);
+  margin: 24px auto;
+  padding: 64px 72px 96px;
+  background: var(--qingxin-paper);
+  border: 1px solid rgb(220 230 227 / 72%);
+  border-radius: 10px;
+  box-shadow: var(--qingxin-shadow);
+}
+
+#write > :first-child {
+  margin-top: 0 !important;
+}
+
+#write > :last-child {
+  margin-bottom: 0 !important;
+}
+
+p {
+  margin: 1.15em 0;
+}
+
+a {
+  color: var(--qingxin-accent);
+  text-decoration-color: rgb(47 144 143 / 38%);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--qingxin-accent-hover);
+  text-decoration-color: currentColor;
+}
+
+strong,
+b {
+  color: var(--qingxin-warm);
+  font-weight: 650;
+}
+
+em,
+i {
+  color: #426965;
+}
+
+mark {
+  padding: 0.08em 0.22em;
+  color: inherit;
+  background: var(--qingxin-mark);
+  border-radius: 3px;
+}
+
+hr {
+  width: 34%;
+  height: 1px;
+  margin: 3em auto;
+  background: var(--qingxin-border-strong);
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #244c47;
+  font-family: var(--qingxin-font-sans);
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  text-align: left;
+}
+
+h1 {
+  margin: 0 0 1.4em;
+  padding-bottom: 0.55em;
+  font-size: clamp(1.9rem, 4vw, 2.35rem);
+  letter-spacing: -0.035em;
+  border-bottom: 2px solid var(--qingxin-accent);
+}
+
+h2 {
+  margin: 2.6em 0 0.85em;
+  padding-bottom: 0.38em;
+  font-size: 1.62rem;
+  border-bottom: 1px solid var(--qingxin-border);
+}
+
+h3 {
+  margin: 2.15em 0 0.65em;
+  font-size: 1.3rem;
+}
+
+h4 {
+  margin: 1.85em 0 0.55em;
+  font-size: 1.12rem;
+}
+
+h5,
+h6 {
+  margin: 1.6em 0 0.45em;
+  font-size: 1rem;
+}
+
+h6 {
+  color: var(--qingxin-muted);
+}
+
+ul,
+ol {
+  margin: 1em 0;
+  padding-left: 1.65em;
+}
+
+li {
+  margin: 0.35em 0;
+  padding-left: 0.16em;
+}
+
+li::marker {
+  color: var(--qingxin-accent);
+}
+
+li > p {
+  margin: 0.45em 0;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin: 0.25em 0;
+}
+
+.task-list-item {
+  padding-left: 0.2em;
+}
+
+.task-list-item input {
+  margin-right: 0.55em;
+  accent-color: var(--qingxin-accent);
+}
+
+blockquote {
+  margin: 1.6em 0;
+  padding: 0.35em 1.15em;
+  color: #526662;
+  background: linear-gradient(90deg, var(--qingxin-accent-soft), transparent 88%);
+  border-left: 4px solid var(--qingxin-accent);
+  border-radius: 0 6px 6px 0;
+}
+
+blockquote > :first-child {
+  margin-top: 0.45em;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0.45em;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--qingxin-font-mono);
+  font-variant-ligatures: none;
+}
+
+code {
+  margin: 0 0.08em;
+  padding: 0.14em 0.38em;
+  color: #b14f3b;
+  background: var(--qingxin-code-bg);
+  border: 1px solid var(--qingxin-border);
+  border-radius: 4px;
+  font-size: 0.88em;
+  overflow-wrap: anywhere;
+}
+
+pre,
+.md-fences {
+  margin: 1.55em 0;
+  padding: 1.1em 1.25em;
+  overflow: auto;
+  color: #31433f;
+  background: var(--qingxin-code-bg);
+  border: 1px solid var(--qingxin-border);
+  border-radius: 7px;
+  font-size: 0.875rem;
+  line-height: 1.62;
+  tab-size: 2;
+  -webkit-overflow-scrolling: touch;
+}
+
+pre code,
+.md-fences code {
+  display: block;
+  min-width: max-content;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font-size: inherit;
+  overflow-wrap: normal;
+  white-space: pre;
+}
+
+kbd {
+  padding: 0.12em 0.42em;
+  color: #42534f;
+  background: #fff;
+  border: 1px solid var(--qingxin-border-strong);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  font-size: 0.82em;
+}
+
+table {
+  display: block;
+  width: 100%;
+  margin: 1.6em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  -webkit-overflow-scrolling: touch;
+}
+
+thead {
+  background: var(--qingxin-accent-soft);
+}
+
+th,
+td {
+  min-width: 6em;
+  padding: 0.7em 0.85em;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid var(--qingxin-border);
+}
+
+th {
+  color: #285a54;
+  font-weight: 650;
+  border-bottom-color: var(--qingxin-border-strong);
+}
+
+tbody tr:nth-child(even) {
+  background: #fafcfb;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.8em auto;
+  border-radius: 6px;
+}
+
+figure {
+  margin: 1.8em 0;
+}
+
+figcaption {
+  margin-top: -1em;
+  color: var(--qingxin-muted);
+  font-size: 0.86rem;
+  text-align: center;
+}
+
+sup,
+sub {
+  line-height: 0;
+}
+
+.footnotes {
+  margin-top: 3em;
+  padding-top: 1em;
+  color: var(--qingxin-muted);
+  border-top: 1px solid var(--qingxin-border);
+  font-size: 0.9rem;
+}
+
+.md-toc {
+  margin: 1.6em 0;
+  padding: 1.1em 1.25em;
+  background: #fafcfb;
+  border: 1px solid var(--qingxin-border);
+  border-radius: 7px;
+}
+
+.md-toc-content {
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.md-meta-block {
+  margin-bottom: 2em;
+  padding: 1em 1.2em;
+  color: var(--qingxin-muted);
+  background: #fafcfb;
+  border: 1px solid var(--qingxin-border);
+  border-radius: 7px;
+  font-family: var(--qingxin-font-mono);
+  font-size: 0.82rem;
+}
+
+.md-image > .md-meta,
+.md-link > .md-meta {
+  color: var(--qingxin-faint);
+}
+
+.md-comment {
+  color: var(--qingxin-faint);
+}
+
+.md-def-name,
+.md-def-url {
+  color: var(--qingxin-muted);
+}
+
+.CodeMirror,
+.CodeMirror.cm-s-inner {
+  color: var(--qingxin-text);
+  background: var(--qingxin-code-bg);
+  font-family: var(--qingxin-font-mono);
+}
+
+.CodeMirror-gutters {
+  background: var(--qingxin-code-bg);
+  border-right-color: var(--qingxin-border);
+}
+
+.CodeMirror-linenumber {
+  color: var(--qingxin-faint);
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+  color: #7b8986;
+}
+
+.cm-s-inner .cm-keyword,
+.cm-s-inner.cm-keyword {
+  color: #8e5f9d;
+}
+
+.cm-s-inner .cm-string,
+.cm-s-inner.cm-string {
+  color: #557f42;
+}
+
+.cm-s-inner .cm-number,
+.cm-s-inner.cm-number {
+  color: #b15d42;
+}
+
+.cm-s-inner .cm-variable,
+.cm-s-inner.cm-variable,
+.cm-s-inner .cm-property,
+.cm-s-inner.cm-property {
+  color: #286f83;
+}
+
+/*
+ * Mobile readers do not always expose a narrow CSS viewport, and some of them
+ * render Markdown without the usual #write wrapper. Apply the reading gutter
+ * to the page itself on narrow screens and touch-first devices so it remains
+ * effective in both cases.
+ */
+@media (max-width: 720px), (hover: none) and (pointer: coarse) {
+  html {
+    font-size: 15.5px;
+  }
+
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    padding-right: 28px;
+    padding-left: 28px;
+    padding-right: max(28px, env(safe-area-inset-right));
+    padding-left: max(28px, env(safe-area-inset-left));
+  }
+
+  #write {
+    width: auto;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 38px;
+    padding-right: 0;
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
+    padding-left: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  h2 {
+    margin-top: 2.25em;
+    font-size: 1.48rem;
+  }
+
+  pre,
+  .md-fences {
+    margin-right: -8px;
+    margin-left: -8px;
+    padding: 1em;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    padding-right: 26px;
+    padding-left: 26px;
+    padding-right: max(26px, env(safe-area-inset-right));
+    padding-left: max(26px, env(safe-area-inset-left));
+  }
+
+  body {
+    line-height: 1.76;
+  }
+
+  th,
+  td {
+    padding: 0.58em 0.68em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --qingxin-bg: #17201f;
+    --qingxin-paper: #202a28;
+    --qingxin-text: #d8e2df;
+    --qingxin-muted: #9fadaa;
+    --qingxin-faint: #81908c;
+    --qingxin-accent: #72c3bd;
+    --qingxin-accent-hover: #9bd8d2;
+    --qingxin-accent-soft: #253c38;
+    --qingxin-warm: #e58c78;
+    --qingxin-border: #394744;
+    --qingxin-border-strong: #4a5c58;
+    --qingxin-code-bg: #192321;
+    --qingxin-mark: #6a5823;
+    --qingxin-selection: #315d57;
+    --qingxin-shadow: 0 14px 42px rgb(0 0 0 / 18%);
+  }
+
+  #write {
+    border-color: rgb(74 92 88 / 70%);
+  }
+
+  em,
+  i {
+    color: #acd0cb;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #b9ddd8;
+  }
+
+  code {
+    color: #ef9c83;
+  }
+
+  blockquote {
+    color: #b0bfbb;
+  }
+
+  kbd {
+    color: var(--qingxin-text);
+    background: #27322f;
+  }
+
+  thead,
+  tbody tr:nth-child(even),
+  .md-toc,
+  .md-meta-block {
+    background: #24302d;
+  }
+
+  th {
+    color: #a8d5cf;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media print {
+  :root {
+    --qingxin-bg: #ffffff;
+    --qingxin-paper: #ffffff;
+    --qingxin-text: #1f2927;
+  }
+
+  body {
+    background: #fff;
+    font-size: 11pt;
+  }
+
+  #write {
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  pre,
+  blockquote,
+  table,
+  img {
+    break-inside: avoid;
+  }
+}
